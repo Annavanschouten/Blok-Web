@@ -5,7 +5,7 @@
 var hamburgermenu = document.querySelector('.menu');
 var menu = document.querySelector('.hamburgermenu');
 
-function showMenu(){
+function showMenu() {
     menu.classList.toggle('showMenuknop');
 }
 

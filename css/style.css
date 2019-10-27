@@ -8,14 +8,14 @@
 /*Lettertype*/
 /*Bron: in de les van Vasilis */
 
-@font-face{
-font-family: 'Libre Baskerville', serif;
-     src: url(webfonts/Libre_Baskerville/LibreBaskerville-Bold.ttf);
+@font-face {
+    font-family: 'Libre Baskerville', serif;
+    src: url(webfonts/Libre_Baskerville/LibreBaskerville-Bold.ttf);
 }
 
-@font-face{
-font-family: 'Abel', sans-serif;
-     src: url(webfonts/Abel/Abel-Regular.ttf);
+@font-face {
+    font-family: 'Abel', sans-serif;
+    src: url(webfonts/Abel/Abel-Regular.ttf);
 }
 
 /*Navigatie*/
@@ -35,9 +35,44 @@ font-family: 'Abel', sans-serif;
     width: 10em;
 }
 
+/*SVG animatie*/
+/*Bron: https://css-tricks.com/animating-svg-css/*/
+svg {
+    width: 10em;
+    height: 10em;
+}
+
+
+.st6 {
+    animation: animate 3s ease-out;
+
+}
+
+@keyframes animate {
+    0% {
+        opacity: 0;
+    }
+ 
+}
+
+svg:first-of-type {
+    padding-left: 1em;
+    padding-top: 0em;
+}
+
 /*Afbeelding van hamburgermenu*/
 .menu {
-    width: 7em;
+    width: 5em;
+    height: 5em;
+    padding-top: 3.5em;
+}
+
+a {
+    color: black;
+}
+
+a:hover {
+    color: red;
 }
 
 /*Grootte van header*/
@@ -47,9 +82,12 @@ font-family: 'Abel', sans-serif;
 }
 
 /*Hoe de menu types uit klappen van hamburgermenu*/
+/*Javascript8?
+/*Bron: Powerpoint presentatie les 05, Brightspace*/
+/*URL:https://docs.google.com/presentation/d/e/2PACX-1vQp_O6GKUfONEwcJj9F26KH05SKcet9lkwoZJQPEW77MefJGWLeF9EpEJ7dG5aQEdLy3ynvirxkyAnV/pub?start=false&loop=false&delayms=3000&slide=id.g118256c73c_0_151*/
 .hamburgermenu {
     border: solid black 0.1em;
-    transform: translate(0em, -20em);
+    transform: translate(1em, -20em);
     position: absolute;
     right: 1em;
     background-color: white;
@@ -73,6 +111,17 @@ font-family: 'Abel', sans-serif;
 /*Class voor het uitkomen van afb JS*/
 .showMenuknop {
     transform: translate(0);
+}
+
+/*Kop op afbeelding*/
+h1 {
+    text-align: center;
+    color: red;
+    font-size: 1em;
+    text-shadow: 0.1em 0.1em 0.1em black;
+    position: absolute;
+    padding: 0.2em;
+
 }
 
 /*Afbeelding op home scherm*/
@@ -100,6 +149,7 @@ font-family: 'Abel', sans-serif;
     background-color: black;
     color: red;
     border: black;
+    transform: rotate(180deg);
 }
 
 /*Welkoms tekst*/
@@ -110,13 +160,18 @@ font-family: 'Abel', sans-serif;
 }
 
 /*Tekst van welkom*/
-#welkom {
-    font-weight: 800;
+h2 {
+    font-weight: 400;
+    font-size: 1.5em;
+    color: red;
+    text-shadow: 0.1em 0.1em 0.1em black;
     font-family: 'Libre Baskerville', serif;
 }
 
-#welkomtekst{
-   font-family: 'Abel', sans-serif; 
+#welkomtekst {
+    font-family: 'Abel', sans-serif;
+    column-width: 400px;
+    letter-spacing: 1px;
 }
 
 /*Nagel behandelingen */
@@ -128,19 +183,24 @@ font-family: 'Abel', sans-serif;
 .articlenagelbehandeling {
     border: solid black 0.1em;
     margin: 1em 1em 1em 1em;
+
 }
 
 /*Kop van tekst*/
 .kopnagelbehandeling {
     text-align: center;
+    font-size: 20px;
     text-shadow: 0.1em 0.1em 0.1em red;
     font-family: 'Libre Baskerville', serif;
+    padding: 0.5em;
 }
 
 /*Tekst in kader*/
 .tekstnagelbehandeling {
     text-align: center;
     font-family: 'Abel', sans-serif;
+    padding: 0.5em;
+    letter-spacing: 1px;
 }
 
 /*Pedicure behandelingen*/
@@ -152,19 +212,24 @@ font-family: 'Abel', sans-serif;
 .articlepedicurebehandeling {
     border: solid black 0.1em;
     margin: 1em 1em 1em 1em;
+
 }
 
 /*Kop van tekst*/
 .koppedicurebehandeling {
     text-align: center;
+    font-size: 20px;
     text-shadow: 0.1em 0.1em 0.1em red;
     font-family: 'Libre Baskerville', serif;
+    padding: 0.5em;
 }
 
 /*Tekst in kader*/
 .tekstpedicurebehandeling {
     text-align: center;
     font-family: 'Abel', sans-serif;
+    padding: 0.5em;
+    letter-spacing: 1px;
 }
 
 /*Spa pedicure behandelingen*/
@@ -181,23 +246,110 @@ font-family: 'Abel', sans-serif;
 /*Kop van tekst*/
 .kopspapedicurebehandeling {
     text-align: center;
+    font-size: 20px;
     text-shadow: 0.1em 0.1em 0.1em red;
     font-family: 'Libre Baskerville', serif;
+    padding: 0.5em;
 }
 
 /*Tekst in kader*/
 .tekstspapedicurebehandeling {
     text-align: center;
     font-family: 'Abel', sans-serif;
+    padding: 0.5em;
+    letter-spacing: 1px;
+}
+
+
+/*Formulier*/
+/*Bron: brightspace les*/
+form {
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+}
+
+form:valid {
+    background-color: green;
+}
+
+form:invalid {
+    background-color: red;
+}
+
+input {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1em;
+    width: 100%;
+}
+
+input#vraag {
+    height: 7em;
+}
+
+input:focus {
+    background-color: yellow;
+}
+
+
+fieldset {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1em;
+    background-color: black;
+    ;
+}
+
+legend {
+    font-weight: 800;
+    font-size: 25px;
+    color: white;
+    font-family: 'Libre Baskerville', serif;
+}
+
+label {
+    color: white;
+    font-family: 'Abel', sans-serif;
+}
+
+select {
+    margin-bottom: 1em;
+    font-size: 15px;
+    background-color: white;
+    color: black;
+    width: 50%;
+    height: 2em;
+}
+
+
+button {
+    font-size: 1em;
+    width: 7em;
+    height: 2em;
+    background-color: lightgrey;
+    font-family: 'Libre Baskerville', serif;
+}
+
+div:nth-child(2) {
+    text-align: center;
+    font-family: 'Libre Baskerville', serif;
+    font-size: 20px;
+    padding: 1em;
 }
 
 
 /*Footer*/
-.footerlogo {
-    width: 10em;
+svg:last-of-type {
     display: block;
     margin-right: auto;
     margin-left: auto;
+}
+
+footer {
+    display: flex;
+    justify-content: space-around;
+
 }
 
 /*Grootte van footer*/
@@ -236,105 +388,7 @@ li {
 /*Streep tussen logo*/
 .streep {
     width: 100%;
-    height: 0.05em;
-}
-
-/*Contact formulier*/
-/*Bron: powerpoint presentatie les 06, Brightspace*/
-/*URL:https://dlo.mijnhva.nl/d2l/le/content/32112/viewContent/174042/View*/
-form {
-    display: flex;
-    flex-direction: column;
-    padding: 1em;
-}
-
-/*Als het formulier niet goed is*/
-form:invalid {
-    background: rgba(red);
-}
-
-/*Fieldset met tekst*/
-fieldset {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-bottom: 1em;
-    padding: 1em;
-    background: lightgrey;
-}
-
-/*Fieldset goed ingevuld paragraaf*/
-fieldset:valid p {
-    display: block;
-    color: White;
-    background-color: seaGreen;
-    padding: .25em;
-}
-
-/*Fieldset niet goed ingevuld paragraaf*/
-fieldset:invalid p {
-    display: none;
-}
-
-/*Kop contact en de vraag gaat over*/
-legend {
-    font-weight: bold;
-    font-family: 'Libre Baskerville', serif;
-}
-
-
-/*Kopjes bover input*/
-label{
-    font-family: 'Abel', sans-serif;
-}
-
-
-/*Meer opties*/
-summary{
-    font-family: 'Abel', sans-serif;
-}
-
-details{
- 
-}
-
-
-
-/*Wat je invult*/
-input {
-    padding: .25em;
-    font-size: 1.25em;
-    margin-bottom: 1em;
-    width: 100%;
-}
-
-/*Wat je invult goed is*/
-input:valid {
-    border-color: green;
-    background-color: green;
-    color: white;
-}
-
-/*Wat je invult niet goed is*/
-input:invalid {
-    border-color: red;
-    background: red;
-}
-
-/*Verstuur knop*/
-button {
-    font-size: 1em;
-    transition: .2s 1s;
-    width: 6em;
-    font-family: 'Libre Baskerville', serif;
-}
-
-
-/*Antwoord op contact*/
-.antwoord {
-    text-align: center;
-    font-size: 20px;
-    font-family: 'Abel', sans-serif;
+    height: 0.10em;
 }
 
 
@@ -367,5 +421,7 @@ button {
         justify-content: flex-end;
 
     }
+
+
 
 }
